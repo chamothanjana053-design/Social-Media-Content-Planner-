@@ -1,0 +1,92 @@
+/* Reset default browser styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+ /* Full page background */
+        body {
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            /* Background image */
+            background-image: url('bg.jpg'); /* <-- Replace with your downloaded image name */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+/* Login container */
+.login-container {
+    background: #ffffff;
+    width: 360px;
+    padding: 30px 25px;
+    border-radius: 10px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    text-align: center;
+}
+
+/* Logo */
+.logo {
+    width: 100px;
+    margin-bottom: 15px;
+}
+
+/* Heading */
+.login-container h2 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Input fields */
+.login-container input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+}
+
+.login-container input:focus {
+    border-color: #2e7d32;
+    outline: none;
+}
+
+/* Login button */
+.login-btn {
+    width: 100%;
+    padding: 12px;
+    background: #1976d2;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.login-btn:hover {
+    background: #0d47a1;
+}
+
+/* OR text */
+.or-text {
+    margin: 20px 0;
+    color: #777;
+    font-weight: bold;
+}
+
+/* Continue with Google - GREEN */
+.google-btn {
+    width: 100%;
+    padding: 12px;
+    background: #2e7d32;      /* Green */
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 15px;
+    cursor: pointer;
+}
