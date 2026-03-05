@@ -6,7 +6,7 @@
 |---|---|---|
 | Chamoth Anjana | ITBNM-2313-0003 | DevOps Engineer |
 | Mindula Deenamulla | ITBNM-2313-0074 | Frontend Developer |
-| Rasanga Bandara | TBIN-2312-0002 | JavaScript / Backend Logic Developer |
+| Rasanga Bandara | ITBIN-2312-0002 | JavaScript / Backend Logic Developer |
 
 ---
 
@@ -62,22 +62,6 @@ cd Social-Media-Content-Planner-
 # 2. Build and start the container
 docker compose up --build -d
 
-### Environment Configuration
-
-Before running the application, configure your environment variables:
-
-bash
-# Copy the example environment file
-cp .env.example .env
-
-
-Edit .env if you wish to change the default port (default is 8080):
-
-
-HOST_PORT=8080
-NODE_ENV=production
-APP_VERSION=1.0.0
-
 
 ---
 
@@ -122,48 +106,11 @@ bash
 docker build -t unit-converter:latest .
 
 # Run the container
-docker run -d \
-  --name unit-converter-app \
-  -p 8080:80 \
-  unit-converter:latest
-
 
 Access at: **http://localhost:8080**
 
-bash
-# Stop and remove the container
-docker stop unit-converter-app
-docker rm unit-converter-app
-
-
 ---
 
-### Checking Container Health
-
-bash
-# View running containers and health status
-docker ps
-
-# View container logs
-docker compose logs -f web
-
-# Inspect health check details
-docker inspect unit-converter-app | grep -A 10 '"Health"'
-
-
----
-
-### Verifying the Build
-
-After building, you can check the final image size:
-
-bash
-docker images unit-converter
-
-
-The final image should be approximately *40–60 MB* (nginx:alpine base), compared to ~900 MB for a standard Node.js image — demonstrating the efficiency of the multi-stage build.
-
----
 
 
 
